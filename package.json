@@ -1,5 +1,15 @@
 {
   "name": "time_to_answer",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/laisns/time-to-answer.git",
+  "author": "Laís Nascimento <lais.sdsn@gmail.com>",
+  "license": "MIT"
 }
