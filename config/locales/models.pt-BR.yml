@@ -7,19 +7,33 @@
       user:
         one: Usuário
         other: Usuários
-      attributes:
-        admin:
-          id: Código
-          email: Emailxx
-          password: Senha
-          password_confirmation: Confirmação da Senha
-          created_at: Criado em
-          updated_at: Atualizado em
-
-        user:
-          id: Código
-          email: Email
-          password: Senha
-          password_confirmation: Confirmação da Senha
-          created_at: Criado em
-          updated_at: Atualizado em
+      subject:
+        one: Usuário
+        other: Usuários
+      question:
+        one: Usuário
+        other: Usuários
+    attributes:
+      admin:
+        id: Código
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da Senha
+        created_at: Criado em
+        updated_at: Atualizado em
+      user:
+        id: Código
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da Senha
+        created_at: Criado em
+        updated_at: Atualizado em
+      subject:
+        id: Código
+        email: Emailxx
+        created_at: Criado em
+        updated_at: Atualizado em
+      question:
+        id: Código
+        description: Descrição
+        subject: Assunto
