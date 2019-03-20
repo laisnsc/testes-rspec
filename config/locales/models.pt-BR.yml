@@ -8,11 +8,11 @@
         one: Usuário
         other: Usuários
       subject:
-        one: Usuário
-        other: Usuários
+        one: Assunto
+        other: Assuntos
       question:
-        one: Usuário
-        other: Usuários
+        one: Questão
+        other: Questões
     attributes:
       admin:
         id: Código
@@ -30,9 +30,8 @@
         updated_at: Atualizado em
       subject:
         id: Código
-        email: Emailxx
-        created_at: Criado em
-        updated_at: Atualizado em
+        description: Descrição
+        subject: Assunto
       question:
         id: Código
         description: Descrição
