@@ -5,21 +5,28 @@ RSpec.describe Admin, type: :model do
   describe 'validations' do
     it {is_expected.to validate_presence_of(:email)}
     it {is_expected.to validate_presence_of(:password)}
-
-    describe 'valid_password' do
-      it 'must be at least 8 characters' do
-        admin = Admin.new(email: email, password: password).save
-        expect(admin).to be(false)
-      end
-    end
-
-    describe 'valid_email' do
-      it 'must be uffmail' do
-        admin = Admin.new(email: email, password: password).save
-        expect(admin).to be(true)
-      end
-    end
   end
+
+  describe 'lowcase_email' do
+        it 'must be lowcase' do
+          admin = Admin.new(email: email.lowercase, password: password).save
+          expect(admin).to be(true)
+        end
+  end
+  #   describe 'valid_password' do
+  #     it 'must be at least 8 characters' do
+  #       admin = Admin.new(email: email, password: password).save
+  #       expect(admin).to be(false)
+  #     end
+  #   end
+  #
+  #   describe 'valid_email' do
+  #     it 'must be uffmail' do
+  #       admin = Admin.new(email: email, password: password).save
+  #       expect(admin).to be(true)
+  #     end
+  #   end
+  # end
   # describe 'password field' do
   #   subject { Admin.new(email: 'teste@id.uff.br', password: password).valid? }
   #   context 'when password has wrong format' do

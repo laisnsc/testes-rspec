@@ -6,11 +6,11 @@ RSpec.describe Question, type: :model do
 
     describe 'valid_description' do
       it 'should be valid' do
-        question = build :question
+        question = FactoryBot.build :question
         expect(question).to be_valid
       end
       it 'should be invalid' do
-        question = build :question
+        question = FactoryBot.build :question
         expect(question).to be_valid
       end
     end
