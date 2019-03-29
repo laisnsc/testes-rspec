@@ -1,8 +1,10 @@
 require 'rails_helper'
 RSpec.describe Question, type: :model do
-  let(:question) {Question.new}
+  let(:question) { FactoryBot.create :question }
+  subject { question }
+
   describe 'validations' do
-    it {is_expected.to validate_presence_of(:description)}
+    it { is_expected.to validate_presence_of(:description) }
 
 #     describe 'valid_description' do
 #       it 'should be valid' do
@@ -16,6 +18,6 @@ RSpec.describe Question, type: :model do
 #     end
   end
   describe 'associations' do
-    it{ is_expected.to belong_to(:subject) }
+    it { is_expected.to belong_to(:subject) }
   end
 end

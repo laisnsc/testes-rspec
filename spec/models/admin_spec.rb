@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Admin, type: :model do
   let(:admin) { FactoryBot.create :admin }
+  subject { admin }
   
   describe 'validations' do
-    it {is_expected.to validate_presence_of(:email)}
-    it {is_expected.to validate_presence_of(:password)}
+    it { is_expected.to validate_presence_of(:email) }
+    it { is_expected.to validate_presence_of(:password) }
   end
 
   describe 'lowcase_email' do
@@ -14,7 +15,13 @@ RSpec.describe Admin, type: :model do
         end
   end
 
-  #it { should validate_uniqueness_of(:email).case_insensitive }
+  # describe 'correct_email' do
+  #   it 'must be uffmail' do
+  #     expect(admin.email).to eq(/[a-z]+@id.uff.br/)
+  #   end
+  # end
+
+  #it {  should validate_uniqueness_of(:email).case_insensitive }
   #   describe 'valid_password' do
   #     it 'must be at least 8 characters' do
   #       admin = Admin.new(email: email, password: password).save

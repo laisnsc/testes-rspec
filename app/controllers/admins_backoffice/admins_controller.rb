@@ -15,7 +15,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     if @admin.save
       redirect_to admins_backoffice_admins_path, notice: "Administrador cadastrado com sucesso"
     else
-      render :new
+      render :new, notice: 'ERRO'
     end
   end
 

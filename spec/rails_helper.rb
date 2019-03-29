@@ -40,7 +40,8 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   # configurar o login para o Devise
   #config.include Devise::Test::IntegrationHelpers, type: :request
-  config.include Devise::TestHelpers, :type => :controller
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.extend ControllerAdmins, :type => :controller
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
   config.include(Shoulda::Matchers::Independent, type: :model)
