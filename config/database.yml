@@ -9,22 +9,22 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: 
+  password: MySQL
   host: localhost
 
 development:
   <<: *default
-  database: uffmail_development
+  database: cadastro_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: uffmail_test
+  database: cadastro_test
 
 production:
   <<: *default
-  database: uffmail_production
-  username: uffmail
-  password: <%= ENV['UFFMAIL_DATABASE_PASSWORD'] %>
+  database: cadastro_production
+  username: cadastro
+  password: <%= ENV['CADASTRO_DATABASE_PASSWORD'] %>
