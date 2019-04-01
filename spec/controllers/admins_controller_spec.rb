@@ -1,5 +1,7 @@
 require "rails_helper"
-
+# class PostsControllerTest < ActionController::TestCase
+#   include Devise::Test::IntegrationHelpers
+# end
 # RSpec.describe ControllerAdmins, :type => :controller do
 #   describe "GET index" do
 #     it "renders index" do
@@ -35,43 +37,6 @@ require "rails_helper"
 #
 ###################################    fim exemplo rspec.pdf
 #####################     testes erro webmock
-
-RSpec.describe Admin, type: :request do
-# GET request
-  context 'GET #index' do
-    it 'should success and render to index page' do
-      get site_welcome_index_path
-      # status 200/ devise
-      expect(response).to have_http_status(200)
-      # expect(response).to render_template admins_backoffice_admins_path
-    end
-  end
-
-
-    context 'GET #show' do
-      let!(:admin) { FactoryBot.create :admin }
-
-      it 'should success and render to edit page' do
-        get :show, params: { id: admin.id }
-        expect(response).to have_http_status(200)
-        expect(response).to render_template :edit
-      end
-    end
-
-  # POST request
-    context 'POST #create' do
-      let!(:admin) { FactoryBot.create :admin }
-
-      it 'should create a new admin' do
-        params = {
-            email: 'admintest@id.uff.br',
-            password: 'password'
-        }
-        expect {get(edit_admins_backoffice_admin_path(admin))}.to change(Admin, :count).by(1)
-        expect { click_button "Save" }.to change(Admin, :count).by(1)
-      end
-    end
-end
 ############### fim erros webmock
 RSpec.describe Admin, type: :routing do
   describe 'routing' do

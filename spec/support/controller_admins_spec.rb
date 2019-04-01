@@ -21,9 +21,7 @@ module ControllerAdmins
   def login_admin
     before(:each) do
       @request.env["devise.mapping"] = Devise.mappings[:admin]
-      admin = FactoryBot.create(:admin)
-      sign_in admin
-
+      sign_in FactoryBot.create(:admin)
     end
   end
 end

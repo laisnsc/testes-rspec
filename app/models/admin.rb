@@ -6,7 +6,7 @@ class Admin < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  #validates :password, presence: true, length: { minimum: 8 }
+  validates :password, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: {with: EMAIL_REGEX}
   #Kaminari
   paginates_per 5
