@@ -32,7 +32,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
   def destroy
     if @admin.destroy
-      redirect_to admins_backoffice_admins_path, notice: "Administrador exlcuido com sucesso!"
+      redirect_to admins_backoffice_admins_path, notice: "Administrador excluido com sucesso!"
     else
       render :index
     end
