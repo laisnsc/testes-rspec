@@ -15,7 +15,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     if @admin.save
       redirect_to admins_backoffice_admins_path, notice: "Administrador cadastrado com sucesso"
     else
-      render :new, notice: 'ERRO'
+      render new_admins_backoffice_admin_path, notice: "Senhax"
     end
   end
 
@@ -34,7 +34,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     if @admin.destroy
       redirect_to admins_backoffice_admins_path, notice: "Administrador excluido com sucesso!"
     else
-      render :index
+      render :index, notice: "Senha invlida!"
     end
   end
 

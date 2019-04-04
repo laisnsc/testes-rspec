@@ -13,5 +13,5 @@ Capybara.register_driver :chrome do |app|
 end
 
 # Trocar quando for necessário, tentar manter o headless_chrome antes de commitar
-Capybara.javascript_driver = :headless_chrome
-# Capybara.javascript_driver = :chrome
+# Capybara.javascript_driver = :headless_chrome
+Capybara.javascript_driver = :chrome
